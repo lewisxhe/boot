@@ -211,7 +211,7 @@ class LilyGO():
                 elif ret == 0:
                     print("end")
                     break
-            player.finish()
+            self.player.finish()
             pass
 
     def enableLED(self, en):
@@ -243,9 +243,9 @@ lcd.clear(lcd.BLACK)
 time.sleep(1)
 lcd.draw_string(0, 0, "Press button keep test camera", lcd.GREEN, lcd.BLACK)
 print('run mic audio')
-while not m.buttonIsPressed():
+# while not m.buttonIsPressed():
     # m.startMic()
-     m.startAudio()
+m.startAudio()
 
 while True:
     img = sensor.snapshot()
